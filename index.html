@@ -50,7 +50,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=32">
+<link rel="stylesheet" href="styles.css?v=33">
 </head>
 <body>
 
@@ -66,7 +66,19 @@
       <a href="#contacto">Contacto</a>
     </nav>
     <a class="button" href="#contacto">Escríbenos<span class="icon">↗</span></a>
+    <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
   </header>
+  <nav class="mobile-menu" id="mobile-menu">
+    <a href="#servicios">Servicios</a>
+    <a href="#productos">Productos</a>
+    <a href="#proyectos">Aplicaciones</a>
+    <a href="#clientes">Clientes</a>
+    <a href="educacion.html">Educación</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
 </div>
 
 <main>
@@ -555,6 +567,6 @@
   </div>
 </footer>
 
-<script src="script.js?v=16"></script>
+<script src="script.js?v=17"></script>
 </body>
 </html>
