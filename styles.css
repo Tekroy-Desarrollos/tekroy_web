@@ -256,6 +256,9 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; letter-spacing:
 /* ---------- services (bento) ---------- */
 .services { padding: clamp(48px, 8vh, 96px) 0 clamp(72px, 10vh, 120px); }
 .services-head { max-width: 46ch; margin-bottom: clamp(32px, 5vh, 56px); }
+.services-head .lead { max-width: none; }
+.services-title { white-space: nowrap; }
+@media (max-width: 30em) { .services-title { white-space: normal; } }
 .bento { display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px; }
 .b-card { padding: 28px; gap: 12px; justify-content: flex-start; }
 .b-card h3 { font-size: var(--step-card); }
@@ -405,8 +408,10 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; letter-spacing:
 .edu-hero .wrap { max-width: 50rem; }
 .edu-hero .lead { max-width: 64ch; margin-top: 20px; color: var(--ink); }
 .edu-partner { padding: clamp(24px, 5vh, 48px) 0 clamp(48px, 7vh, 80px); }
-.edu-partner-row { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; }
-.edu-partner-row img { height: 52px; width: auto; }
+.edu-partner .wrap { max-width: 50rem; }
+.edu-partner-row { display: flex; flex-direction: column; align-items: flex-start; gap: 18px; }
+.edu-partner-row img { height: 56px; width: auto; }
+.edu-partner-row .lead { text-align: justify; }
 .edu-gallery { padding: clamp(48px, 8vh, 96px) 0; background: var(--shell); }
 .edu-gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
 .edu-placeholder {
@@ -417,6 +422,9 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; letter-spacing:
   color: var(--muted);
   font-size: var(--step-small);
 }
+.edu-photo .bezel-inner { aspect-ratio: 4 / 3; overflow: hidden; }
+.edu-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.edu-photo-caption { margin-top: 8px; text-align: center; }
 .edu-form { max-width: 32rem; }
 .edu-cta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
 @media (max-width: 58em) { .edu-cta-grid { grid-template-columns: 1fr; } .edu-form { max-width: none; } }
