@@ -1,0 +1,7 @@
+# Design-skill scratch output (screenshots, drafts) — not site content
+.taste-skill/
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+*.swp
