@@ -29,22 +29,100 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Tekroy Electrónica",
-  "url": "https://tekroy.cl/",
-  "logo": "https://tekroy.cl/assets/Logos_Tekroy/cuadrado_negro.png",
-  "description": "Diseño y desarrollo de hardware electrónico a medida: placas electrónicas, firmware y sistemas con microcontroladores para industria, agricultura y energía.",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Pasaje Lautaro 37",
-    "addressLocality": "Viña del Mar",
-    "addressRegion": "Valparaíso",
-    "addressCountry": "CL"
-  },
-  "email": "contacto@tekroy.cl",
-  "sameAs": [
-    "https://www.instagram.com/tekroyelectronica/",
-    "https://www.linkedin.com/company/tekroy-electrónica"
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://tekroy.cl/#website",
+      "url": "https://tekroy.cl/",
+      "name": "Tekroy Electrónica",
+      "inLanguage": "es-CL",
+      "publisher": { "@id": "https://tekroy.cl/#organization" }
+    },
+    {
+      "@type": ["Organization", "ProfessionalService"],
+      "@id": "https://tekroy.cl/#organization",
+      "name": "Tekroy Electrónica",
+      "url": "https://tekroy.cl/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://tekroy.cl/assets/Logos_Tekroy/cuadrado_negro.png"
+      },
+      "image": "https://tekroy.cl/assets/Productos/Foto_Terreno_Industrial.jpg",
+      "description": "Diseño y desarrollo de hardware electrónico a medida: placas electrónicas, firmware y sistemas con microcontroladores para industria, agricultura y energía.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Pasaje Lautaro 37",
+        "addressLocality": "Viña del Mar",
+        "addressRegion": "Valparaíso",
+        "addressCountry": "CL"
+      },
+      "email": "contacto@tekroy.cl",
+      "areaServed": {
+        "@type": "Country",
+        "name": "Chile"
+      },
+      "knowsAbout": [
+        "Telemetría industrial",
+        "Telemetría agrícola",
+        "Internet de las cosas (IoT)",
+        "Diseño de placas electrónicas (PCB)",
+        "Firmware y software embebido",
+        "Sensores de humedad y temperatura de suelo",
+        "Sensores de nivel y presión",
+        "Monitoreo de bombas y riego",
+        "Electrónica para energía"
+      ],
+      "sameAs": [
+        "https://www.instagram.com/tekroyelectronica/",
+        "https://www.linkedin.com/company/tekroy-electrónica"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Servicios de Tekroy Electrónica",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Diseño de hardware electrónico a medida",
+              "description": "Diseño de placas electrónicas y equipos a medida para aplicaciones industriales, agrícolas y de energía."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Software embebido",
+              "description": "Desarrollo de firmware y software embebido para equipos de medición, control y telemetría."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Producción de electrónica",
+              "description": "Fabricación y ensamblaje de equipos electrónicos en series cortas y medianas."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Soporte y reparaciones",
+              "description": "Soporte técnico, mantenimiento y reparación de equipos electrónicos para continuidad operativa."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Logística y abastecimiento de componentes",
+              "description": "Abastecimiento de componentes electrónicos con stock propio en la Región Metropolitana y Valparaíso."
+            }
+          }
+        ]
+      }
+    }
   ]
 }
 </script>
@@ -53,6 +131,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/Productos/Sensor_TkIOT_LTE_Frontal.webp" fetchpriority="high">
 <link rel="stylesheet" href="styles.css?v=35">
 </head>
 <body>
@@ -98,7 +177,7 @@
       </div>
     </div>
     <div class="hero-art" data-reveal>
-      <img class="hero-photo" src="assets/Productos/Sensor_TkIOT_LTE_Frontal.png" width="557" height="1600" alt="Sensor Tekroy con comunicación LTE" fetchpriority="high">
+      <img class="hero-photo" src="assets/Productos/Sensor_TkIOT_LTE_Frontal.webp" width="557" height="1600" alt="Sensor Tekroy con comunicación LTE" fetchpriority="high">
       <div class="bezel card-note"><div class="bezel-inner">
         <span class="stat">Stock propio</span>
         <span class="stat-label">en Viña del Mar, Región de Valparaíso</span>
@@ -227,28 +306,28 @@
     <div class="carousel-track" id="carousel-track">
       <div class="p-card" data-sector="agro">
         <div class="bezel"><div class="bezel-inner">
-          <img src="assets/Productos/THCS_FULL.png" width="900" height="900" alt="Sensor de calidad de suelo: humedad, temperatura y conductividad" loading="lazy">
+          <img src="assets/Productos/THCS_FULL.webp" width="900" height="900" alt="Sensor de calidad de suelo: humedad, temperatura y conductividad" loading="lazy">
         </div></div>
         <h3>Sensor de calidad de suelo</h3>
         <span class="p-tag">Agrícola</span>
       </div>
       <div class="p-card" data-sector="agro">
         <div class="bezel"><div class="bezel-inner">
-          <img src="assets/Productos/Tk_IOT_Presion_Riego.png" width="864" height="864" alt="Sensor de presión para línea de riego" loading="lazy">
+          <img src="assets/Productos/Tk_IOT_Presion_Riego.webp" width="864" height="864" alt="Sensor de presión para línea de riego" loading="lazy">
         </div></div>
         <h3>Sensor de presión de riego</h3>
         <span class="p-tag">Agrícola</span>
       </div>
       <div class="p-card" data-sector="energia">
         <div class="bezel"><div class="bezel-inner">
-          <img src="assets/Productos/Tk_IOT_Sensor_Hidrostatico_LTE_Frontal.png" width="599" height="900" alt="Sensor de nivel hidrostático con comunicación LTE" loading="lazy">
+          <img src="assets/Productos/Tk_IOT_Sensor_Hidrostatico_LTE_Frontal.webp" width="599" height="900" alt="Sensor de nivel hidrostático con comunicación LTE" loading="lazy">
         </div></div>
         <h3>Sensor de nivel hidrostático</h3>
         <span class="p-tag">Energía</span>
       </div>
       <div class="p-card" data-sector="energia">
         <div class="bezel"><div class="bezel-inner">
-          <img src="assets/Productos/Sensor_TkIOT_LTE_Frontal.png" width="557" height="1600" alt="Nodo de telemetría con comunicación LTE" loading="lazy">
+          <img src="assets/Productos/Sensor_TkIOT_LTE_Frontal.webp" width="557" height="1600" alt="Nodo de telemetría con comunicación LTE" loading="lazy">
         </div></div>
         <h3>Nodo de telemetría LTE</h3>
         <span class="p-tag">Energía</span>
@@ -262,35 +341,35 @@
       </div>
       <div class="p-card" data-sector="industrial">
         <div class="bezel"><div class="bezel-inner">
-          <img src="assets/Productos/Factor_Analogico.png" width="900" height="837" alt="Controlador electrónico analógico para equipos de vibración" loading="lazy">
+          <img src="assets/Productos/Factor_Analogico.webp" width="900" height="837" alt="Controlador electrónico analógico para equipos de vibración" loading="lazy">
         </div></div>
         <h3>Controlador analógico de vibración</h3>
         <span class="p-tag">Industrial</span>
       </div>
       <div class="p-card" data-sector="industrial">
         <div class="bezel"><div class="bezel-inner">
-          <img src="assets/Productos/tarjeta_factor_REV1_3.png" width="900" height="638" alt="Controlador digital de potencia fabricado por Tekroy" loading="lazy">
+          <img src="assets/Productos/tarjeta_factor_REV1_3.webp" width="900" height="638" alt="Controlador digital de potencia fabricado por Tekroy" loading="lazy">
         </div></div>
         <h3>Controlador digital de potencia</h3>
         <span class="p-tag">Industrial</span>
       </div>
       <div class="p-card" data-sector="consumo">
         <div class="bezel"><div class="bezel-inner">
-          <img src="assets/Productos/Corne_Fire.png" width="800" height="800" alt="Teclado mecánico Corne, edición Fire, fabricado por Tekroy" loading="lazy">
+          <img src="assets/Productos/Corne_Fire.webp" width="800" height="800" alt="Teclado mecánico Corne, edición Fire, fabricado por Tekroy" loading="lazy">
         </div></div>
         <h3>Teclado mecánico — Fire</h3>
         <span class="p-tag">Consumo</span>
       </div>
       <div class="p-card" data-sector="consumo">
         <div class="bezel"><div class="bezel-inner">
-          <img src="assets/Productos/Corne_Cold.png" width="800" height="800" alt="Teclado mecánico Corne, edición Cold, fabricado por Tekroy" loading="lazy">
+          <img src="assets/Productos/Corne_Cold.webp" width="800" height="800" alt="Teclado mecánico Corne, edición Cold, fabricado por Tekroy" loading="lazy">
         </div></div>
         <h3>Teclado mecánico — Cold</h3>
         <span class="p-tag">Consumo</span>
       </div>
       <div class="p-card" data-sector="consumo">
         <div class="bezel"><div class="bezel-inner">
-          <img src="assets/Productos/Corne_Chess.png" width="800" height="800" alt="Teclado mecánico Corne, edición Chess, fabricado por Tekroy" loading="lazy">
+          <img src="assets/Productos/Corne_Chess.webp" width="800" height="800" alt="Teclado mecánico Corne, edición Chess, fabricado por Tekroy" loading="lazy">
         </div></div>
         <h3>Teclado mecánico — Chess</h3>
         <span class="p-tag">Consumo</span>
@@ -319,28 +398,28 @@
 
       <div class="p-card" data-sector="agro" aria-hidden="true">
         <div class="bezel"><div class="bezel-inner">
-          <img src="assets/Productos/THCS_FULL.png" width="900" height="900" alt="" loading="lazy">
+          <img src="assets/Productos/THCS_FULL.webp" width="900" height="900" alt="" loading="lazy">
         </div></div>
         <h3>Sensor de calidad de suelo</h3>
         <span class="p-tag">Agrícola</span>
       </div>
       <div class="p-card" data-sector="agro" aria-hidden="true">
         <div class="bezel"><div class="bezel-inner">
-          <img src="assets/Productos/Tk_IOT_Presion_Riego.png" width="864" height="864" alt="" loading="lazy">
+          <img src="assets/Productos/Tk_IOT_Presion_Riego.webp" width="864" height="864" alt="" loading="lazy">
         </div></div>
         <h3>Sensor de presión de riego</h3>
         <span class="p-tag">Agrícola</span>
       </div>
       <div class="p-card" data-sector="energia" aria-hidden="true">
         <div class="bezel"><div class="bezel-inner">
-          <img src="assets/Productos/Tk_IOT_Sensor_Hidrostatico_LTE_Frontal.png" width="599" height="900" alt="" loading="lazy">
+          <img src="assets/Productos/Tk_IOT_Sensor_Hidrostatico_LTE_Frontal.webp" width="599" height="900" alt="" loading="lazy">
         </div></div>
         <h3>Sensor de nivel hidrostático</h3>
         <span class="p-tag">Energía</span>
       </div>
       <div class="p-card" data-sector="energia" aria-hidden="true">
         <div class="bezel"><div class="bezel-inner">
-          <img src="assets/Productos/Sensor_TkIOT_LTE_Frontal.png" width="557" height="1600" alt="" loading="lazy">
+          <img src="assets/Productos/Sensor_TkIOT_LTE_Frontal.webp" width="557" height="1600" alt="" loading="lazy">
         </div></div>
         <h3>Nodo de telemetría LTE</h3>
         <span class="p-tag">Energía</span>
@@ -354,35 +433,35 @@
       </div>
       <div class="p-card" data-sector="industrial" aria-hidden="true">
         <div class="bezel"><div class="bezel-inner">
-          <img src="assets/Productos/Factor_Analogico.png" width="900" height="837" alt="" loading="lazy">
+          <img src="assets/Productos/Factor_Analogico.webp" width="900" height="837" alt="" loading="lazy">
         </div></div>
         <h3>Controlador analógico de vibración</h3>
         <span class="p-tag">Industrial</span>
       </div>
       <div class="p-card" data-sector="industrial" aria-hidden="true">
         <div class="bezel"><div class="bezel-inner">
-          <img src="assets/Productos/tarjeta_factor_REV1_3.png" width="900" height="638" alt="" loading="lazy">
+          <img src="assets/Productos/tarjeta_factor_REV1_3.webp" width="900" height="638" alt="" loading="lazy">
         </div></div>
         <h3>Controlador digital de potencia</h3>
         <span class="p-tag">Industrial</span>
       </div>
       <div class="p-card" data-sector="consumo" aria-hidden="true">
         <div class="bezel"><div class="bezel-inner">
-          <img src="assets/Productos/Corne_Fire.png" width="800" height="800" alt="" loading="lazy">
+          <img src="assets/Productos/Corne_Fire.webp" width="800" height="800" alt="" loading="lazy">
         </div></div>
         <h3>Teclado mecánico — Fire</h3>
         <span class="p-tag">Consumo</span>
       </div>
       <div class="p-card" data-sector="consumo" aria-hidden="true">
         <div class="bezel"><div class="bezel-inner">
-          <img src="assets/Productos/Corne_Cold.png" width="800" height="800" alt="" loading="lazy">
+          <img src="assets/Productos/Corne_Cold.webp" width="800" height="800" alt="" loading="lazy">
         </div></div>
         <h3>Teclado mecánico — Cold</h3>
         <span class="p-tag">Consumo</span>
       </div>
       <div class="p-card" data-sector="consumo" aria-hidden="true">
         <div class="bezel"><div class="bezel-inner">
-          <img src="assets/Productos/Corne_Chess.png" width="800" height="800" alt="" loading="lazy">
+          <img src="assets/Productos/Corne_Chess.webp" width="800" height="800" alt="" loading="lazy">
         </div></div>
         <h3>Teclado mecánico — Chess</h3>
         <span class="p-tag">Consumo</span>
@@ -499,7 +578,7 @@
         <img class="partner-logo" src="assets/Logos_Partners/global_logo_naranja.png" alt="Global Chile Electrónica">
       </div>
       <div class="bezel partner-art"><div class="bezel-inner">
-        <img src="assets/Productos/Educacion_Panel_Domotica.png" width="900" height="600" alt="Panel de domótica educativo fabricado por Tekroy para Global Chile Electrónica" loading="lazy">
+        <img src="assets/Productos/Educacion_Panel_Domotica.webp" width="900" height="600" alt="Panel de domótica educativo fabricado por Tekroy para Global Chile Electrónica" loading="lazy">
       </div></div>
     </div>
   </div>
