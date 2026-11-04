@@ -113,3 +113,20 @@
     window.location.href = `mailto:contacto@tekroy.cl?subject=${subject}&body=${body}`;
   });
 })();
+
+// Contact form (páginas de servicio) — el asunto del correo viene del data-asunto de la página.
+(() => {
+  const form = document.getElementById('contact-form-servicio');
+  if (!form) return;
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const nombre = form.nombre.value.trim();
+    const empresa = form.empresa.value.trim();
+    const mensaje = form.mensaje.value.trim();
+    const quien = empresa ? `soy ${nombre} de la empresa ${empresa}` : `soy ${nombre}`;
+    const asunto = form.dataset.asunto || 'Consulta desde tekroy.cl';
+    const subject = encodeURIComponent(asunto);
+    const body = encodeURIComponent(`Estimado equipo de Tekroy Electrónica, ${quien},\n\n${mensaje}`);
+    window.location.href = `mailto:contacto@tekroy.cl?subject=${subject}&body=${body}`;
+  });
+})();
